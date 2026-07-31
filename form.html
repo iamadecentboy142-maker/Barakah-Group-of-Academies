@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form | Barakah Group of Academies</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+          <style>
+            /* ===================================
+   BARAKAH GROUP OF ACADEMIES
+   Admission Form CSS
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#0B4F9C;
+    --secondary:#0F75BC;
+    --gold:#D4AF37;
+    --white:#ffffff;
+    --dark:#1f2937;
+    --light:#f5f7fb;
+    --border:#d8d8d8;
+    --shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+body{
+
+    background:#eef3f9;
+    font-family:'Poppins',sans-serif;
+    color:var(--dark);
+    padding:40px;
+
+}
+
+.container{
+
+    max-width:1200px;
+    margin:auto;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+
+}
+
+/* ================= HEADER ================= */
+
+.header{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+    padding:30px;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+
+}
+
+.logo{
+
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    flex-shrink:0;
+
+}
+
+.logo img{
+
+    width:100%;
+    height:100%;
+    object-fit:contain;
+
+}
+
+.school-info{
+
+    flex:1;
+
+}
+
+.school-info h1{
+
+    color:var(--gold);
+    font-size:34px;
+    margin-bottom:8px;
+    letter-spacing:1px;
+
+}
+
+.school-info h3{
+
+    font-size:22px;
+    margin-bottom:8px;
+
+}
+
+.school-info p{
+
+    opacity:.95;
+    margin:3px 0;
+
+}
+
+/* ================= ADMISSION INFO ================= */
+
+.admission-info{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:25px;
+    background:#f7f9fc;
+    border-bottom:1px solid #ddd;
+
+}
+
+.box{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* ================= FORM ================= */
+
+form{
+
+    padding:35px;
+
+}
+
+h2{
+
+    margin:35px 0 20px;
+    padding-bottom:10px;
+    color:var(--primary);
+    border-bottom:3px solid var(--gold);
+
+}
+
+.grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+
+}
+
+.full{
+
+    grid-column:1/-1;
+
+}
+
+/* ================= PHOTO ================= */
+
+.photo-section{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.photo-section img{
+
+    width:150px;
+    height:180px;
+    object-fit:cover;
+    border:4px solid var(--gold);
+    border-radius:10px;
+    margin-bottom:15px;
+    background:#f2f2f2;
+
+}
+
+.photo-section input{
+
+    width:100%;
+
+}
+
+/* ================= INPUTS ================= */
+
+label{
+
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+    padding:12px 15px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    font-size:15px;
+    transition:.3s;
+    background:white;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    border-color:var(--primary);
+    outline:none;
+    box-shadow:0 0 0 3px rgba(11,79,156,.15);
+
+}
+
+/* ================= DECLARATION ================= */
+
+.declaration{
+
+    margin-top:20px;
+    background:#f8f9fc;
+    border-left:5px solid var(--gold);
+    padding:20px;
+    border-radius:10px;
+
+}
+
+.declaration p{
+
+    line-height:1.8;
+    margin-bottom:15px;
+
+}
+
+.declaration label{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:600;
+
+}
+
+.declaration input{
+
+    width:auto;
+
+}
+
+/* ================= SIGNATURE ================= */
+
+.signatures{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin:50px 0;
+
+}
+
+.signatures p{
+
+    text-align:center;
+    font-weight:600;
+    margin-bottom:40px;
+
+}
+
+.line{
+
+    border-bottom:2px solid black;
+
+}
+
+/* ================= BUTTONS ================= */
+
+.buttons{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+
+}
+
+.buttons button{
+
+    padding:14px 28px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.buttons button i{
+
+    margin-right:8px;
+
+}
+
+button[type="submit"]{
+
+    background:var(--primary);
+
+}
+
+button[type="submit"]:hover{
+
+    background:#083c78;
+
+}
+
+#downloadPdf{
+
+    background:#d62828;
+
+}
+
+#downloadPdf:hover{
+
+    background:#a4161a;
+
+}
+
+button[type="reset"]{
+
+    background:#6b7280;
+
+}
+
+button[type="reset"]:hover{
+
+    background:#4b5563;
+
+}
+
+button[onclick]{
+
+    background:#198754;
+
+}
+
+button[onclick]:hover{
+
+    background:#146c43;
+
+}
+
+/* ================= TABLE STYLE ================= */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+
+}
+
+table th,
+table td{
+
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+
+}
+
+table th{
+
+    background:var(--primary);
+    color:white;
+
+}
+
+/* ================= PRINT ================= */
+
+@media print{
+
+body{
+
+background:white;
+padding:0;
+
+}
+
+.buttons{
+
+display:none;
+
+}
+
+input,
+textarea,
+select{
+
+border:none;
+background:white;
+
+}
+
+.container{
+
+box-shadow:none;
+
+}
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.header{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.school-info h1{
+
+font-size:28px;
+
+}
+
+.signatures{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+body{
+
+padding:15px;
+
+}
+
+.container{
+
+border-radius:8px;
+
+}
+
+form{
+
+padding:20px;
+
+}
+
+.admission-info{
+
+grid-template-columns:1fr;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.buttons button{
+
+width:100%;
+
+}
+
+.photo-section img{
+
+width:140px;
+height:170px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.school-info h1{
+
+font-size:22px;
+
+}
+
+.school-info h3{
+
+font-size:18px;
+
+}
+
+.logo{
+
+width:100px;
+height:100px;
+
+}
+
+h2{
+
+font-size:20px;
+
+}
+
+input,
+select,
+textarea{
+
+font-size:14px;
+
+}
+
+}
+          </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <img src="logo.png" id="logoPreview" alt="Logo">
+        </div>
+
+        <div class="school-info">
+
+            <h1>BARAKAH GROUP OF ACADEMIES</h1>
+
+            <h3>Pakistan Mint Campus</h3>
+
+            <p>
+                National Model School, 34-D Sukhnehar,
+                Pakistan Mint Gate #2, Lahore
+            </p>
+
+            <p>
+                <strong>Phone:</strong> 0312-0072992
+            </p>
+
+        </div>
+
+    </header>
+
+    <!-- Admission Info -->
+
+    <section class="admission-info">
+
+        <div class="box">
+            <label>Admission No.</label>
+            <input type="text"
+                   id="admissionNo"
+                   readonly>
+        </div>
+
+        <div class="box">
+            <label>Admission Date</label>
+            <input type="date"
+                   id="admissionDate">
+        </div>
+
+        <div class="box">
+            <label>Session</label>
+
+            <select>
+                <option>2026-27</option>
+                <option>2027-28</option>
+            </select>
+
+        </div>
+
+        <div class="box">
+            <label>Applying For</label>
+
+            <select required>
+
+                <option value="">Select Class</option>
+
+                <option>Play Group</option>
+                <option>Nursery</option>
+                <option>Prep</option>
+
+                <option>1st</option>
+                <option>2nd</option>
+                <option>3rd</option>
+                <option>4th</option>
+                <option>5th</option>
+                <option>6th</option>
+                <option>7th</option>
+                <option>8th</option>
+                <option>9th</option>
+                <option>10th</option>
+
+                <option>1st Year</option>
+                <option>2nd Year</option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+<form id="admissionForm">
+
+<!-- ================= Student ================= -->
+
+<h2>Student Information</h2>
+
+<div class="grid">
+
+<div class="photo-section">
+
+<img src="https://via.placeholder.com/140"
+id="photoPreview">
+
+<input type="file"
+id="photoInput"
+accept="image/*">
+
+</div>
+
+<div>
+
+<label>Student Name</label>
+
+<input
+type="text"
+required>
+
+</div>
+
+<div>
+
+<label>Father Name</label>
+
+<input
+type="text"
+required>
+
+</div>
+
+<div>
+
+<label>Mother Name</label>
+
+<input
+type="text">
+
+</div>
+
+<div>
+
+<label>Date of Birth</label>
+
+<input
+type="date"
+id="dob">
+
+</div>
+
+<div>
+
+<label>Age</label>
+
+<input
+type="number"
+id="age"
+readonly>
+
+</div>
+
+<div>
+
+<label>Gender</label>
+
+<select>
+
+<option>Male</option>
+<option>Female</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>B-Form / CNIC</label>
+
+<input
+type="text"
+placeholder="xxxxx-xxxxxxx-x">
+
+</div>
+
+<div>
+
+<label>Blood Group</label>
+
+<select>
+
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB+</option>
+<option>AB-</option>
+<option>O+</option>
+<option>O-</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Religion</label>
+
+<input
+type="text"
+value="Islam">
+
+</div>
+
+<div>
+
+<label>Nationality</label>
+
+<input
+type="text"
+value="Pakistani">
+
+</div>
+
+<div class="full">
+
+<label>Home Address</label>
+
+<textarea rows="4"></textarea>
+
+</div>
+
+</div>
+
+<!-- ================= Parents ================= -->
+
+<h2>Parent Information</h2>
+
+<div class="grid">
+
+<div>
+
+<label>Father CNIC</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Father Occupation</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Father Mobile</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Mother Mobile</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Mother Occupation</label>
+
+<input type="text">
+
+</div>
+
+</div>
+
+<!-- ================= Guardian ================= -->
+
+<h2>Guardian Information</h2>
+
+<div class="grid">
+
+<div>
+
+<label>Guardian Name</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Relationship</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Guardian Mobile</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Guardian CNIC</label>
+
+<input type="text">
+
+</div>
+
+<div class="full">
+
+<label>Guardian Address</label>
+
+<textarea rows="3"></textarea>
+
+</div>
+
+</div>
+
+<!-- ================= Academic ================= -->
+
+<h2>Academic Information</h2>
+
+<div class="grid">
+
+<div>
+
+<label>Previous School</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Last Class Passed</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Board</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Percentage / Grade</label>
+
+<input type="text">
+
+</div>
+
+</div>
+
+<!-- ================= Medical ================= -->
+
+<h2>Medical Information</h2>
+
+<div class="grid">
+
+<div>
+
+<label>Allergies</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Medical Condition</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Emergency Contact</label>
+
+<input type="text">
+
+</div>
+
+<div>
+
+<label>Emergency Mobile</label>
+
+<input type="text">
+
+</div>
+
+</div>
+
+<!-- ================= Declaration ================= -->
+
+<h2>Declaration</h2>
+
+<div class="declaration">
+
+<p>
+
+I hereby declare that all information provided in this admission form is true and correct to the best of my knowledge.
+
+</p>
+
+<label>
+
+<input type="checkbox" required>
+
+I Agree
+
+</label>
+
+</div>
+
+<!-- ================= Signature ================= -->
+
+<div class="signatures">
+
+<div>
+
+<p>Student Signature</p>
+
+<div class="line"></div>
+
+</div>
+
+<div>
+
+<p>Parent Signature</p>
+
+<div class="line"></div>
+
+</div>
+
+<div>
+
+<p>Office Use</p>
+
+<div class="line"></div>
+
+</div>
+
+</div>
+
+<!-- ================= Buttons ================= -->
+
+<div class="buttons">
+
+<button
+type="submit">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Submit
+
+</button>
+
+<button
+type="button"
+id="downloadPdf">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+Download PDF
+
+</button>
+
+<button
+type="button"
+onclick="window.print()">
+
+<i class="fa-solid fa-print"></i>
+
+Print
+
+</button>
+
+<button
+type="reset">
+
+Reset
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+    /* ==========================================
+   BARAKAH GROUP OF ACADEMIES
+   Admission Form JavaScript
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    generateAdmissionNumber();
+    setAdmissionDate();
+    photoPreview();
+    calculateAge();
+    formValidation();
+    downloadPDF();
+
+});
+
+/* ==========================================
+   AUTO ADMISSION NUMBER
+========================================== */
+
+function generateAdmissionNumber(){
+
+    const year = new Date().getFullYear();
+
+    let lastNumber = localStorage.getItem("bgaAdmissionNumber");
+
+    if(lastNumber === null){
+        lastNumber = 1;
+    }else{
+        lastNumber = parseInt(lastNumber) + 1;
+    }
+
+    localStorage.setItem("bgaAdmissionNumber", lastNumber);
+
+    const admissionNo =
+        "BGA-" +
+        year +
+        "-" +
+        String(lastNumber).padStart(4,"0");
+
+    document.getElementById("admissionNo").value = admissionNo;
+
+}
+
+/* ==========================================
+   TODAY DATE
+========================================== */
+
+function setAdmissionDate(){
+
+    const today = new Date();
+
+    const yyyy = today.getFullYear();
+
+    const mm = String(today.getMonth()+1).padStart(2,"0");
+
+    const dd = String(today.getDate()).padStart(2,"0");
+
+    document.getElementById("admissionDate").value =
+        `${yyyy}-${mm}-${dd}`;
+
+}
+
+/* ==========================================
+   PHOTO PREVIEW
+========================================== */
+
+function photoPreview(){
+
+    const input = document.getElementById("photoInput");
+
+    const preview = document.getElementById("photoPreview");
+
+    input.addEventListener("change",function(){
+
+        const file = this.files[0];
+
+        if(!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function(e){
+
+            preview.src = e.target.result;
+
+        }
+
+        reader.readAsDataURL(file);
+
+    });
+
+}
+
+/* ==========================================
+   AGE CALCULATOR
+========================================== */
+
+function calculateAge(){
+
+    const dob = document.getElementById("dob");
+
+    dob.addEventListener("change",function(){
+
+        let birth = new Date(this.value);
+
+        let today = new Date();
+
+        let age = today.getFullYear()-birth.getFullYear();
+
+        let m = today.getMonth()-birth.getMonth();
+
+        if(m<0 || (m===0 && today.getDate()<birth.getDate())){
+
+            age--;
+
+        }
+
+        document.getElementById("age").value = age;
+
+    });
+
+}
+
+/* ==========================================
+   VALIDATION
+========================================== */
+
+function formValidation(){
+
+    const form = document.getElementById("admissionForm");
+
+    form.addEventListener("submit",function(e){
+
+        e.preventDefault();
+
+        let studentName =
+            document.querySelectorAll("input")[2].value.trim();
+
+        if(studentName===""){
+
+            alert("Please enter Student Name.");
+
+            return;
+
+        }
+
+        let age = Number(document.getElementById("age").value);
+
+        if(age<3){
+
+            alert("Student age must be at least 3 years.");
+
+            return;
+
+        }
+
+        const mobilePattern=/^03\d{9}$/;
+
+        const cnicPattern=/^\d{5}-\d{7}-\d$/;
+
+        let fatherMobile =
+            document.querySelectorAll("input")[11].value.trim();
+
+        if(fatherMobile!="" &&
+            !mobilePattern.test(fatherMobile)){
+
+            alert("Invalid Father Mobile Number");
+
+            return;
+
+        }
+
+        let guardianMobile =
+            document.querySelectorAll("input")[14].value.trim();
+
+        if(guardianMobile!="" &&
+            !mobilePattern.test(guardianMobile)){
+
+            alert("Invalid Guardian Mobile");
+
+            return;
+
+        }
+
+        let fatherCNIC =
+            document.querySelectorAll("input")[9].value.trim();
+
+        if(fatherCNIC!="" &&
+            !cnicPattern.test(fatherCNIC)){
+
+            alert("Father CNIC format is invalid.");
+
+            return;
+
+        }
+
+        alert("Admission Form Submitted Successfully.");
+
+        console.log("Admission Saved");
+
+    });
+
+}
+
+/* ==========================================
+   PDF DOWNLOAD
+========================================== */
+
+function downloadPDF(){
+
+const btn=document.getElementById("downloadPdf");
+
+btn.addEventListener("click",()=>{
+
+const form=document.querySelector(".container");
+
+html2canvas(form,{
+scale:2
+}).then(canvas=>{
+
+const imgData=canvas.toDataURL("image/png");
+
+const {jsPDF}=window.jspdf;
+
+const pdf=new jsPDF("p","mm","a4");
+
+const pageWidth=210;
+
+const pageHeight=297;
+
+const imgWidth=pageWidth;
+
+const imgHeight=canvas.height*imgWidth/canvas.width;
+
+let heightLeft=imgHeight;
+
+let position=0;
+
+pdf.addImage(imgData,"PNG",0,position,imgWidth,imgHeight);
+
+heightLeft-=pageHeight;
+
+while(heightLeft>0){
+
+position=heightLeft-imgHeight;
+
+pdf.addPage();
+
+pdf.addImage(imgData,"PNG",0,position,imgWidth,imgHeight);
+
+heightLeft-=pageHeight;
+
+}
+
+const admissionNo=document
+.getElementById("admissionNo")
+.value;
+
+pdf.save(admissionNo+".pdf");
+
+});
+
+});
+
+}
+
+/* ==========================================
+   RESET IMAGE
+========================================== */
+
+document
+.getElementById("admissionForm")
+.addEventListener("reset",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("photoPreview").src=
+"https://via.placeholder.com/140";
+
+document.getElementById("age").value="";
+
+generateAdmissionNumber();
+
+setAdmissionDate();
+
+},100);
+
+});
+
+/* ==========================================
+   PRINT
+========================================== */
+
+window.onbeforeprint=function(){
+
+console.log("Printing Admission Form");
+
+};
+
+window.onafterprint=function(){
+
+console.log("Print Completed");
+
+};
+</script>
+
+</body>
+</html>
