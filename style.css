@@ -583,7 +583,7 @@ CUSTOM SCROLLBAR
     box-shadow:0 15px 40px rgba(0,0,0,.08);
     position:relative;
     overflow:hidden;
-    height: 800px;
+    /* height: 800px; */
 }
 
 .campus-card::before{
@@ -693,6 +693,7 @@ CUSTOM SCROLLBAR
 ==========================================*/
 
 .course-card,
+.campus-card,
 .facility,
 .stats .card,
 .about-image img{
@@ -969,6 +970,7 @@ grid-template-columns:1fr;
 }
 
 .course-grid,
+.campus-grid,
 .facility-grid,
 .gallery-grid{
 
