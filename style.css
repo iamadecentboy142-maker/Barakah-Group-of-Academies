@@ -559,6 +559,77 @@ CUSTOM SCROLLBAR
     line-height:1.8;
 }
 
+
+/*==========================================
+        CAMPUS SECTION
+==========================================*/
+
+.campuses{
+    background:var(--light);
+}
+
+.campus-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.campus-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:22px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    position:relative;
+    overflow:hidden;
+    height: 800px;
+}
+
+.campus-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#1F3C88,#4f84ff);
+}
+
+.campus-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 60px rgba(31,60,136,.18);
+}
+
+.campus-card i{
+    width:90px;
+    height:90px;
+    line-height:90px;
+    border-radius:50%;
+    background:#EAF4FF;
+    color:var(--primary);
+    font-size:38px;
+    margin-bottom:25px;
+    transition:.4s;
+}
+
+.campus-card:hover i{
+    background:var(--primary);
+    color:#fff;
+    transform:rotate(360deg);
+}
+
+.campus-card h3{
+    color:var(--secondary);
+    margin-bottom:12px;
+    font-size:24px;
+}
+
+.campus-card p{
+    color:#666;
+    line-height:1.8;
+}
+
 /*==========================================
         FACILITIES
 ==========================================*/
@@ -841,8 +912,8 @@ display:flex;
 justify-content:center;
 width:100px;
 height:40px;
-font-size:8px;
-content: center ;
+font-size:10px;
+align-items:center;
 
 }
 
